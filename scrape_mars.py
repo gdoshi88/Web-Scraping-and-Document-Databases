@@ -86,9 +86,8 @@ def hemisphere_image_urls(browser):
     for hemi in links:
         hemi_strings.append(hemi.text)
 
-    hemi_strings
-
     hemisphere_image_urls = []
+
     for hemi in hemi_strings:
         hemi_dict = {}
         browser.click_link_by_partial_text(hemi)
