@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mission to Mars</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlAvt"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title text-center"><b>MISSION TO MARS: MARS NEWS</b></h2>
+
+        <button type="button" class="btn btn-secondary btn-outline-secondary btn-lg btn-block"><a href="http://127.0.0.1:5000/scrape"><font size='3' color='DE7E69'>Click to Update Information</font></a>
+          
+        </button>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <h3 class="heading">Latest Mars News</h3>
+            <h4>{{ mars.nasa_mars_title }}</h4>
+            <p>{{ mars.nasa_mars_paragraph }}</p>
+            <br>
+            <h3 class="heading">Featured Mars Image</h3>
+            <a href="{{ mars.featured_img_url }}">
+                <img class="figure_img" src="{{ mars.featured_img_url_two }}" width=900px>
+            </a>
+        </div>
+        <br>
+        <br>
+  
+
+            <h3 class="heading">Mars Facts</h3>
+            {{ mars.facts|safe }}
+        </div>
+    </div>
+    <br>
+    <h3 class="heading text-center">Mars Hemispheres</h3>
+        <div class="row">
+          <div class="col-lg-3">
+          </div>
+          <div class="col-lg-3">
+            <div class="card" style="width: 40rem;">
+                <a href="{{ mars.hemispheres.img_url[0] }}">
+                    <img class="card-img-top" src="{{ mars.hemispheres[0].img_url }}" width=400px alt="{{ mars.hemispheres[0].title }}">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-text text-center">{{ mars.hemispheres[0].title }}</h4>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card" style="width: 40rem;">
+                <a href="{{ mars.hemispheres[1].img_url }}">
+                    <img class="card-img-top" src="{{ mars.hemispheres[1].img_url }}" width=400px alt="{{ mars.hemispheres[1].title }}">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-text text-center">{{ mars.hemispheres[1].title }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-3">
+            <div class="card" style="width: 40rem;">
+                <a href="{{ mars.hemispheres[2].img_url }}">
+                    <img class="card-img-top" src="{{ mars.hemispheres[2].img_url }}" width=400px alt="{{ mars.hemispheres[2].title }}">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-text text-center">{{ mars.hemispheres[2].title }}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card" style="width: 40rem;">
+                <a href="{{ mars.hemispheres[3].img_url }}">
+                    <img class="card-img-top" src="{{ mars.hemispheres[3].img_url }}" width=400px alt="{{ mars.hemispheres[3].title }}">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-text text-center">{{ mars.hemispheres[3].title }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>             
+                             
+            </div>
+            
+        </div>
+        <footer class="page-footer font-small blue">
+          <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="https://github.com/gdoshi88">github.com/gdoshi88</a>
+          </div>
+          </footer>
+  </body>
+</html>
