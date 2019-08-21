@@ -66,11 +66,9 @@ def dataframe():
 
     df = tables[1]
     df.columns = ['Property', 'Number']
-    df.set_index('Property', inplace=True)
-    df.to_html()
-    df.replace('\n', '')
-
-    return df.to_dict()
+    df.set_index('Property', inplace=False)
+    df.to_dict()
+    return df.to_html()
 
 
 def hemisphere_image_urls(browser):

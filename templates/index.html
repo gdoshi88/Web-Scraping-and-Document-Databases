@@ -38,43 +38,46 @@
       </div>
     </div>
     <div class="row">
-        <div class="col-lg-8">
-            <h3 class="heading">Latest Mars News</h3>
-            <h4>{{ mars.nasa_mars_title }}</h4>
-            <p>{{ mars.nasa_mars_paragraph }}</p>
-            <br>
+      <div col-md-12>
             <h3 class="heading">Featured Mars Image</h3>
-            <a href="{{ mars.featured_img_url }}">
-                <img class="figure_img" src="{{ mars.featured_img_url_two }}" width=900px>
+            <a href="{{ mars.featured_img }}">
+                <img class="figure_img" src="{{ mars.featured_img }}">
             </a>
+          </div>
         </div>
         <br>
         <br>
-  
-
+        <div class="row">
+        <div class="col-md-6">
+          <h3 class="heading center">Latest Mars News</h3>
+          <h5 class="center">{{ mars.title }}</h5>
+          <p class="center">{{ mars.paragraph }}</p>
+          <div class="col-lg-6">
             <h3 class="heading">Mars Facts</h3>
-            {{ mars.facts|safe }}
+            {{ mars.facts | safe }}
+          </div>
         </div>
     </div>
+  </div>
     <br>
     <h3 class="heading text-center">Mars Hemispheres</h3>
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-md-3">
           </div>
-          <div class="col-lg-3">
-            <div class="card" style="width: 40rem;">
-                <a href="{{ mars.hemispheres.img_url[0] }}">
-                    <img class="card-img-top" src="{{ mars.hemispheres[0].img_url }}" width=400px alt="{{ mars.hemispheres[0].title }}">
+          <div class="col-md-3">
+            <div class="card" style="width: 20rem;">
+                <a href="{{ mars.hemispheres[0].img_url }}">
+                    <img class="card-img-top" src="{{ mars.hemispheres[0].img_url }}" width=50px alt="{{ mars.hemispheres[0].title }}">
                 </a>
                 <div class="card-body">
                     <h4 class="card-text text-center">{{ mars.hemispheres[0].title }}</h4>
                 </div>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="card" style="width: 40rem;">
+          <div class="col-md-3">
+            <div class="card" style="width: 20rem;">
                 <a href="{{ mars.hemispheres[1].img_url }}">
-                    <img class="card-img-top" src="{{ mars.hemispheres[1].img_url }}" width=400px alt="{{ mars.hemispheres[1].title }}">
+                    <img class="card-img-top" src="{{ mars.hemispheres[1].img_url }}" width=50px alt="{{ mars.hemispheres[1].title }}">
                 </a>
                 <div class="card-body">
                     <h4 class="card-text text-center">{{ mars.hemispheres[1].title }}</h4>
@@ -84,22 +87,22 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-md-3">
         </div>
-        <div class="col-lg-3">
-            <div class="card" style="width: 40rem;">
+        <div class="col-md-3">
+            <div class="card" style="width: 20rem;">
                 <a href="{{ mars.hemispheres[2].img_url }}">
-                    <img class="card-img-top" src="{{ mars.hemispheres[2].img_url }}" width=400px alt="{{ mars.hemispheres[2].title }}">
+                    <img class="card-img-top" src="{{ mars.hemispheres[2].img_url }}" width=50px alt="{{ mars.hemispheres[2].title }}">
                 </a>
                 <div class="card-body">
                     <h4 class="card-text text-center">{{ mars.hemispheres[2].title }}</h4>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
-            <div class="card" style="width: 40rem;">
+        <div class="col-md-3">
+            <div class="card" style="width: 20rem;">
                 <a href="{{ mars.hemispheres[3].img_url }}">
-                    <img class="card-img-top" src="{{ mars.hemispheres[3].img_url }}" width=400px alt="{{ mars.hemispheres[3].title }}">
+                    <img class="card-img-top" src="{{ mars.hemispheres[3].img_url }}" width=50px alt="{{ mars.hemispheres[3].title }}">
                 </a>
                 <div class="card-body">
                     <h4 class="card-text text-center">{{ mars.hemispheres[3].title }}</h4>
